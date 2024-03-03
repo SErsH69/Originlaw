@@ -105,6 +105,32 @@
             height: vw(50);
         }
     }
+    &__select {
+        width: 100%;
+        span {
+            display: block;
+            margin-bottom: vw(10);
+            color: var(--212121, #212121);
+            font-size: vw(16);
+            font-style: normal;
+            font-weight: 400;
+            line-height: 125%;
+            span {
+                color: #D90429;
+                display: inline-block;
+            }
+        }
+        select {
+            border-radius: 5px;
+            border: 1px solid var(--FFFFFF, #FFF);
+            background: var(--FFFFFF, #FFF);
+            width: 100%;
+            padding: vw(10);
+            color: rgba(33, 33, 33, 0.60);
+            padding: 0 vw(20);
+            height: vw(50);
+        }
+    }
     &__textfield {
         width: 100%;
         span {
@@ -145,19 +171,19 @@
             border-radius: 50%;
             background-size: vw(10);
         }
-    }
-    input[type="submit"] {
-        border: 0;
-        border-radius: vw(999);
-        background: var(--012A4A, #012A4A);
-        padding: vw(15) vw(30);
-        padding-right: vw(75);
-        color: var(--FFFFFF, #FFF);
-        font-size: vw(16);
-        font-style: normal;
-        font-weight: 700;
-        line-height: 125%;
-        display: inline-block;
+        input[type="submit"] {
+            border: 0;
+            border-radius: vw(999);
+            background: var(--012A4A, #012A4A);
+            padding: vw(15) vw(30);
+            padding-right: vw(75);
+            color: var(--FFFFFF, #FFF);
+            font-size: vw(16);
+            font-style: normal;
+            font-weight: 700;
+            line-height: 125%;
+            display: inline-block;
+        }
     }
     &__info {
         margin-top: vw(30);
