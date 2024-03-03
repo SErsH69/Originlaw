@@ -1,0 +1,137 @@
+.faq_block {
+    padding-top: vw(90);
+    padding-bottom: vw(120);
+    &__in {
+        display: flex;
+    }
+    &__l-side {
+        flex: 0 0 vw(450);
+        margin-right: vw(30);
+    }
+    &__menu {
+        ul {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            li {
+                a {
+                    color: var(--212121, #212121);
+                    font-size: vw(16);
+                    font-style: normal;
+                    font-weight: 700;
+                    line-height: 125%;
+                    text-decoration: none;
+                    display: inline-block;
+                    margin-bottom: vw(10);
+                    border-radius: vw(999);
+                    background: var(--F5F6F8, #F5F6F8);
+                    padding: vw(15) vw(30);
+                    &:hover {
+                        color: #fff;
+                        background: var(--012A4A, #012A4A);
+                    }
+                }
+            }
+        }
+    }
+    &__r-side {
+        width: 100%;
+    }
+    &__search {
+        width: 100%;
+        margin-bottom: vw(60);
+        form {
+            align-items: center;
+            display: flex;
+            border-radius: vw(999);
+            background: var(--F5F6F8, #F5F6F8);
+        }
+        input {
+            &[type="search"] {
+                padding: vw(15) vw(30);
+                color: var(--212121, #000);
+                background: none;
+                font-size: vw(16);
+                font-style: normal;
+                border: 0;
+                font-weight: 400;
+                height: vw(50);
+                line-height: 125%;
+                width: calc(100% - vw(50));
+                &::placeholder {
+                    color: rgba(33, 33, 33, 0.40);
+                }
+                &::-webkit-search-decoration, &::-webkit-search-cancel-button, &::-webkit-search-results-button, &::-webkit-search-results-decoration {
+                    display: none;
+                }
+            }
+            &[type="submit"] {
+                width: vw(50);
+                height: vw(50);
+                min-height: vw(50);
+                font-size: 0;
+                flex: 0 0 vw(50);
+                border: 0;
+                border-radius: 50%;
+                background: var(--012A4A, #012A4A) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20' fill='none'%3E%3Cpath d='M9.16667 15.8333C12.8486 15.8333 15.8333 12.8486 15.8333 9.16667C15.8333 5.48477 12.8486 2.5 9.16667 2.5C5.48477 2.5 2.5 5.48477 2.5 9.16667C2.5 12.8486 5.48477 15.8333 9.16667 15.8333Z' stroke='white' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M17.5 17.5L13.875 13.875' stroke='white' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") 50% no-repeat;
+                background-size: vw(20);
+            }
+        }
+    }
+    &__item {
+        &:not(:last-child) {
+            margin-bottom: vw(120);
+        }
+    }
+    &__title {
+        color: var(--212121, #212121);
+        font-size: vw(32);
+        font-style: normal;
+        font-weight: 700;
+        line-height: 125%;
+        padding-bottom: vw(40);
+        border-bottom: 1px solid rgba(33, 33, 33, 0.20);
+    }
+    &__block {
+        border-bottom: 1px solid rgba(33, 33, 33, 0.20);
+        &.isActive {
+            .faq_block__answer {
+                display: block;
+            }
+            .faq_block__question:before {
+                background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30' fill='none'%3E%3Cpath d='M6.25 15H23.75' stroke='%23212121' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") 50% / 100% no-repeat;
+            }
+        }
+    }
+    &__question {
+        padding-top: vw(30);
+        padding-bottom: vw(30);
+        position: relative;
+        color: var(--212121, #212121);
+        cursor: pointer;
+        padding-right: vw(60);
+        font-size: vw(21);
+        font-style: normal;
+        font-weight: 700;
+        line-height: 145%;
+        &:before {
+            content: '';
+            position: absolute;
+            right: 0;
+            width: vw(30);
+            height: vw(30);
+            top: 50%;
+            margin-top: vw(-15);
+            background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30' fill='none'%3E%3Cpath d='M15 6.25V23.75' stroke='%23212121' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M6.25 15H23.75' stroke='%23212121' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") 50% / 100% no-repeat;
+        }
+    }
+    &__answer {
+        color: var(--212121, #212121);
+        font-size: vw(16);
+        font-style: normal;
+        font-weight: 400;
+        display: none;
+        line-height: 155%;
+        padding-bottom: vw(40);
+    }
+}

@@ -5,6 +5,7 @@ import Vue from 'vue/dist/vue.js';
 import $ from 'jquery';
 
 import Header from '../blocks/modules/header/header.js';
+import FaqBlock from '../blocks/modules/faq_block/faq_block.js';
 import MainSlider from '../blocks/modules/main_slider/main_slider.js';
 import Modals from '../blocks/modules/modals/modals.js';
 
@@ -17,10 +18,9 @@ window.app = new Vue({
             mobile: 768,
             window: window.innerWidth
         },
-        header: new Header({
-            someVareible: 'someVareible'
-        }),
+        header: new Header(),
         mainSlider: new MainSlider(),
+        faqBlock: new FaqBlock(),
         modals: new Modals({
             modalsSelector: "data-modal",
             modalsOpenerSelector: "data-modal-id",
@@ -36,6 +36,7 @@ window.app = new Vue({
         this.isMounted = true;
         this.header.init();
         this.mainSlider.init();
+        this.faqBlock.init();
         this.modals.init();
     },
     computed: {

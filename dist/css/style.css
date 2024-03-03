@@ -3008,6 +3008,161 @@ textarea {
   border-bottom: 1px solid var(--212121, #212121);
 }
 
+.faq_block {
+  padding-top: 4.6875vw;
+  padding-bottom: 6.25vw;
+}
+
+.faq_block__in {
+  display: flex;
+}
+
+.faq_block__l-side {
+  flex: 0 0 23.4375vw;
+  margin-right: 1.5625vw;
+}
+
+.faq_block__menu ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.faq_block__menu ul li a {
+  color: var(--212121, #212121);
+  font-size: 0.8333333333vw;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 125%;
+  text-decoration: none;
+  display: inline-block;
+  margin-bottom: 0.5208333333vw;
+  border-radius: 52.03125vw;
+  background: var(--F5F6F8, #F5F6F8);
+  padding: 0.78125vw 1.5625vw;
+}
+
+.faq_block__menu ul li a:hover {
+  color: #fff;
+  background: var(--012A4A, #012A4A);
+}
+
+.faq_block__r-side {
+  width: 100%;
+}
+
+.faq_block__search {
+  width: 100%;
+  margin-bottom: 3.125vw;
+}
+
+.faq_block__search form {
+  align-items: center;
+  display: flex;
+  border-radius: 52.03125vw;
+  background: var(--F5F6F8, #F5F6F8);
+}
+
+.faq_block__search input[type=search] {
+  padding: 0.78125vw 1.5625vw;
+  color: var(--212121, #000);
+  background: none;
+  font-size: 0.8333333333vw;
+  font-style: normal;
+  border: 0;
+  font-weight: 400;
+  height: 2.6041666667vw;
+  line-height: 125%;
+  width: calc(100% - 2.6041666667vw);
+}
+
+.faq_block__search input[type=search]::-moz-placeholder {
+  color: rgba(33, 33, 33, 0.4);
+}
+
+.faq_block__search input[type=search]::placeholder {
+  color: rgba(33, 33, 33, 0.4);
+}
+
+.faq_block__search input[type=search]::-webkit-search-decoration,
+.faq_block__search input[type=search]::-webkit-search-cancel-button,
+.faq_block__search input[type=search]::-webkit-search-results-button,
+.faq_block__search input[type=search]::-webkit-search-results-decoration {
+  display: none;
+}
+
+.faq_block__search input[type=submit] {
+  width: 2.6041666667vw;
+  height: 2.6041666667vw;
+  min-height: 2.6041666667vw;
+  font-size: 0;
+  flex: 0 0 2.6041666667vw;
+  border: 0;
+  border-radius: 50%;
+  background: var(--012A4A, #012A4A) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20' fill='none'%3E%3Cpath d='M9.16667 15.8333C12.8486 15.8333 15.8333 12.8486 15.8333 9.16667C15.8333 5.48477 12.8486 2.5 9.16667 2.5C5.48477 2.5 2.5 5.48477 2.5 9.16667C2.5 12.8486 5.48477 15.8333 9.16667 15.8333Z' stroke='white' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M17.5 17.5L13.875 13.875' stroke='white' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") 50% no-repeat;
+  background-size: 1.0416666667vw;
+}
+
+.faq_block__item:not(:last-child) {
+  margin-bottom: 6.25vw;
+}
+
+.faq_block__title {
+  color: var(--212121, #212121);
+  font-size: 1.6666666667vw;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 125%;
+  padding-bottom: 2.0833333333vw;
+  border-bottom: 1px solid rgba(33, 33, 33, 0.2);
+}
+
+.faq_block__block {
+  border-bottom: 1px solid rgba(33, 33, 33, 0.2);
+}
+
+.faq_block__block.isActive .faq_block__answer {
+  display: block;
+}
+
+.faq_block__block.isActive .faq_block__question:before {
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30' fill='none'%3E%3Cpath d='M6.25 15H23.75' stroke='%23212121' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") 50%/100% no-repeat;
+}
+
+.faq_block__question {
+  padding-top: 1.5625vw;
+  padding-bottom: 1.5625vw;
+  position: relative;
+  color: var(--212121, #212121);
+  cursor: pointer;
+  padding-right: 3.125vw;
+  font-size: 1.09375vw;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 145%;
+}
+
+.faq_block__question:before {
+  content: "";
+  position: absolute;
+  right: 0;
+  width: 1.5625vw;
+  height: 1.5625vw;
+  top: 50%;
+  margin-top: -0.78125vw;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30' fill='none'%3E%3Cpath d='M15 6.25V23.75' stroke='%23212121' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M6.25 15H23.75' stroke='%23212121' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") 50%/100% no-repeat;
+}
+
+.faq_block__answer {
+  color: var(--212121, #212121);
+  font-size: 0.8333333333vw;
+  font-style: normal;
+  font-weight: 400;
+  display: none;
+  line-height: 155%;
+  padding-bottom: 2.0833333333vw;
+}
+
 .footer {
   background: var(--012A4A, #012A4A);
 }
