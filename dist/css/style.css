@@ -1765,6 +1765,103 @@ textarea {
      object-fit: cover;
 }
 
+.prac_block {
+  padding-top: 4.6875vw;
+  padding-bottom: 6.25vw;
+  background: var(--F5F6F8, #F5F6F8);
+}
+
+.prac_block__white {
+  background: #fff;
+}
+
+.prac_block__white .prac_block__item:before {
+  background: #fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='10' viewBox='0 0 10 10' fill='none'%3E%3Cg clip-path='url(%23clip0_2002_2045)'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M0 0.658719C0.0673117 0.357917 0.357991 0.310849 0.588806 0.417884C3.62342 1.82506 6.6614 3.22501 9.6994 4.62489C9.86334 4.70045 9.99831 4.79469 9.99998 4.99249C10.0016 5.19049 9.86934 5.28749 9.70475 5.36334C6.66091 6.76609 3.61794 8.17069 0.574768 9.57489C0.362935 9.67262 0.197866 9.65108 0.081421 9.50376C0.0464683 9.45953 0.0267131 9.4033 2.08333e-07 9.35256C2.08333e-07 9.30696 2.08333e-07 9.26137 2.08333e-07 9.2158C0.0432029 9.1408 0.0791933 9.0604 0.130666 8.99159C1.06185 7.74692 1.99491 6.5037 2.92749 5.26009C2.99341 5.1722 3.05862 5.08376 3.12396 4.99587C3.10059 4.96322 3.08222 4.93657 3.06283 4.91071C2.0969 3.62299 1.13041 2.33571 0.165955 1.04691C0.102763 0.96247 0.0549521 0.866523 0 0.775937C0 0.736864 0 0.697791 0 0.658719Z' fill='%23012A4A'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_2002_2045'%3E%3Crect width='10' height='10' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E") 50% no-repeat;
+}
+
+.prac_block__top {
+  display: flex;
+  margin-bottom: 4.6875vw;
+}
+
+.prac_block__title {
+  width: calc(50% - 0.78125vw);
+  color: var(--212121, #212121);
+  font-size: 1.6666666667vw;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 125%;
+}
+
+.prac_block__text {
+  width: calc(50% - 0.78125vw);
+  color: var(--212121, #212121);
+  font-size: 0.8333333333vw;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 155%;
+}
+
+.prac_block__item {
+  display: flex;
+  text-decoration: none;
+  padding-top: 1.5625vw;
+  padding-bottom: 1.5625vw;
+  position: relative;
+  border-bottom: 1px solid rgba(33, 33, 33, 0.2);
+}
+
+.prac_block__item:first-child {
+  border-top: 1px solid rgba(33, 33, 33, 0.2);
+}
+
+.prac_block__item:before {
+  content: "";
+  position: absolute;
+  width: 1.5625vw;
+  height: 1.5625vw;
+  top: 50%;
+  margin-top: -0.78125vw;
+  right: 0;
+  background: var(--F5F6F8, #F5F6F8) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='10' viewBox='0 0 10 10' fill='none'%3E%3Cg clip-path='url(%23clip0_2002_2045)'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M0 0.658719C0.0673117 0.357917 0.357991 0.310849 0.588806 0.417884C3.62342 1.82506 6.6614 3.22501 9.6994 4.62489C9.86334 4.70045 9.99831 4.79469 9.99998 4.99249C10.0016 5.19049 9.86934 5.28749 9.70475 5.36334C6.66091 6.76609 3.61794 8.17069 0.574768 9.57489C0.362935 9.67262 0.197866 9.65108 0.081421 9.50376C0.0464683 9.45953 0.0267131 9.4033 2.08333e-07 9.35256C2.08333e-07 9.30696 2.08333e-07 9.26137 2.08333e-07 9.2158C0.0432029 9.1408 0.0791933 9.0604 0.130666 8.99159C1.06185 7.74692 1.99491 6.5037 2.92749 5.26009C2.99341 5.1722 3.05862 5.08376 3.12396 4.99587C3.10059 4.96322 3.08222 4.93657 3.06283 4.91071C2.0969 3.62299 1.13041 2.33571 0.165955 1.04691C0.102763 0.96247 0.0549521 0.866523 0 0.775937C0 0.736864 0 0.697791 0 0.658719Z' fill='%23012A4A'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_2002_2045'%3E%3Crect width='10' height='10' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E") 50% no-repeat;
+  background-size: 0.5208333333vw;
+  border-radius: 50%;
+}
+
+.prac_block__item--title {
+  width: calc(50% - 0.78125vw);
+  color: var(--212121, #212121);
+  font-size: 1.09375vw;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 145%;
+}
+
+.prac_block__item--text {
+  width: calc(50% - 0.78125vw);
+  color: var(--212121, #212121);
+  font-size: 0.8333333333vw;
+  font-style: normal;
+  font-weight: 400;
+  padding-right: 4.6875vw;
+  line-height: 155%;
+}
+
+.prac_block__item:hover {
+  background: var(--012A4A, #012A4A);
+  padding-left: 1.5625vw;
+  padding-right: 1.5625vw;
+}
+
+.prac_block__item:hover:before {
+  right: 1.5625vw;
+}
+
+.prac_block__item:hover .prac_block__item--title,
+.prac_block__item:hover .prac_block__item--text {
+  color: #fff;
+}
+
 .main_slider {
   background: var(--012A4A, #012A4A);
   padding-top: 6.25vw;
