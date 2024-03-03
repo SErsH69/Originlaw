@@ -1,0 +1,45 @@
+.main_red {
+    padding-top: vw(90);
+    padding-bottom: vw(120);
+    &__in {
+        display: flex;
+    }
+    &__title {
+        width: calc(50% - vw(15));
+        color: var(--212121, #212121);
+        font-size: vw(32);
+        font-style: normal;
+        font-weight: 700;
+        line-height: 125%;
+    }
+    &__info {
+        width: calc(50% - vw(15));
+    }
+    &__text {
+        margin-bottom: vw(60);
+        color: var(--212121, #212121);
+        font-size: vw(16);
+        font-style: normal;
+        font-weight: 400;
+        line-height: 155%;
+    }
+    &__post {
+        padding-top: vw(30);
+        padding-bottom: vw(30);
+        border-top: 1px solid var(--212121, #212121);
+        border-bottom: 1px solid var(--212121, #212121);
+        display: flex;
+        color: var(--212121, #212121);
+        font-size: vw(24);
+        font-style: normal;
+        font-weight: 700;
+        line-height: 125%;
+        span {
+            font-size: vw(16);
+            font-weight: 400;
+            line-height: 155%;
+            flex: 0 0 vw(65);
+            margin-right: vw(37);
+        }
+    }
+}

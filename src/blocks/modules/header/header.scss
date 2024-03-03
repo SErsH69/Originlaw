@@ -1,0 +1,71 @@
+.header {
+    position: absolute;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    &__in {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-top: vw(20);
+        padding-bottom: vw(20);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+    }
+    &__logo {
+        font-size: 0;
+        text-decoration: none;
+        display: inline-block;
+        flex: 0 0 vw(254);
+        margin-right: vw(10);
+    }
+    &__menu {
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            li {
+                margin-left: vw(15);
+                margin-right: vw(15);
+                a {
+                    color: var(--FFFFFF, #FFF);
+                    display: inline-block;
+                    font-size: vw(16);
+                    font-style: normal;
+                    font-weight: 700;
+                    text-decoration: none;
+                    line-height: 125%;
+                    background-image: linear-gradient(currentColor, currentColor);
+                    background-position: 0% 100%;
+                    background-repeat: no-repeat;
+                    background-size: 0% 1px;
+                    transition: background-size .3s;
+                    &:hover {
+                      background-size: 100% 1px;
+                    }
+                }
+            }
+        }
+    }
+    &__langs {
+        display: flex;
+    }
+    &__lang {
+        padding: vw(10);
+        border-radius: 50%;
+        font-size: 0;
+        text-decoration: none;
+        display: block;
+        img {
+            width: vw(20);
+            height: vw(20);
+            border-radius: 50%;
+        }
+        &.isActive {
+            background: rgba(255, 255, 255, 0.08);
+        }
+    }
+}

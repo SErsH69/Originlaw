@@ -1,0 +1,153 @@
+.footer {
+    background: var(--012A4A, #012A4A);
+    &__top {
+        padding-top: vw(90);
+        padding-bottom: vw(90);
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+    &__logo {
+        display: inline-block;
+        text-decoration: none;
+        font-size: 0;
+        max-width: vw(254);
+        width: 100%;
+    }
+    &__menus {
+        span {
+            display: inline-block;
+            margin-bottom: vw(10);
+            color: rgba(255, 255, 255, 0.40);
+            font-family: "Noto Sans SC";
+            font-size: vw(12);
+            font-style: normal;
+            font-weight: 400;
+            line-height: 125%;
+        }
+        ul {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            li {
+                &:not(:last-child) {
+                    margin-bottom: vw(10);
+                }
+                a {
+                    color: var(--FFFFFF, #FFF);
+                    font-size: vw(16);
+                    text-decoration: none;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 185%;
+                    background-image: linear-gradient(currentColor, currentColor);
+                    background-position: 0% 100%;
+                    background-repeat: no-repeat;
+                    background-size: 0% 1px;
+                    transition: background-size .3s;
+                    &:hover {
+                      background-size: 100% 1px;
+                    }
+                }
+            }
+        }
+    }
+    &__adr {
+        span {
+            color: rgba(255, 255, 255, 0.40);
+            font-size: vw(12);
+            font-style: normal;
+            font-weight: 400;
+            line-height: 125%;
+            margin-bottom: vw(10);
+            display: inline-block;
+        }
+        &--text {
+            color: var(--FFFFFF, #FFF);
+            font-size: vw(16);
+            font-style: normal;
+            font-weight: 400;
+            line-height: 185%;
+        }
+    }
+    &__info {
+        span {
+            color: rgba(255, 255, 255, 0.40);
+            font-size: vw(12);
+            font-style: normal;
+            font-weight: 400;
+            line-height: 125%;
+            margin-bottom: vw(15);
+            display: inline-block;
+        }
+    }
+    &__socs {
+        display: flex;
+    }
+    &__soc {
+        width: vw(50);
+        height: vw(50);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        font-size: 0;
+        background: rgba(255, 255, 255, 0.08);
+        img {
+            width: vw(22);
+            height: vw(22);
+        }
+        &:not(:last-child) {
+            margin-right: vw(10);
+        }
+    }
+    &__bottom {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-top: vw(30);
+        padding-bottom: vw(30);
+    }
+    &__copy {
+        color: var(--FFFFFF, #FFF);
+        font-size: vw(16);
+        font-style: normal;
+        font-weight: 400;
+        line-height: 125%;
+    }
+    &__menu {
+        margin-left: auto;
+        margin-right: auto;
+        ul {
+            display: flex;
+            align-items: center;
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            justify-content: center;
+            li {
+                &:not(:last-child) {
+                    margin-right: vw(20);
+                    padding-right: vw(20);
+                    border-right: 1px solid rgba(255, 255, 255, 0.20);                    ;
+                }
+                a {
+                    color: var(--FFFFFF, #FFF);
+                    font-size: vw(16);
+                    font-style: normal;
+                    font-weight: 400;
+                    text-decoration: none;
+                    line-height: 125%;
+                    background-image: linear-gradient(currentColor, currentColor);
+                    background-position: 0% 100%;
+                    background-repeat: no-repeat;
+                    background-size: 0% 1px;
+                    transition: background-size .3s;
+                    &:hover {
+                      background-size: 100% 1px;
+                    }
+                }
+            }
+        }
+    }
+}
