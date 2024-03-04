@@ -41,4 +41,11 @@
     &__r-side {
         width: calc(50% - vw(15));
     }
+    &__text {
+        color: var(--212121, #212121);
+        font-size: vw(16);
+        font-style: normal;
+        font-weight: 400;
+        line-height: 155%;
+    }
 }
