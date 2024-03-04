@@ -568,6 +568,10 @@ textarea {
   background: #292D33;
 }
 
+h2 {
+  line-height: 145%;
+}
+
 .header {
   position: absolute;
   z-index: 100;
