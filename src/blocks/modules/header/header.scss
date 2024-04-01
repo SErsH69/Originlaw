@@ -54,21 +54,26 @@
         display: flex;
     }
     &__lang {
-        padding: vw(10);
-        border-radius: 50%;
-        font-size: 0;
+        margin: 0 vw(10);
         text-decoration: none;
         display: block;
-        img {
-            width: vw(20);
-            height: vw(20);
-            border-radius: 50%;
+        color: var(--FFFFFF, #FFF);
+        display: inline-block;
+        font-size: vw(16);
+        font-style: normal;
+        font-weight: 700;
+        text-decoration: none;
+        line-height: 125%;
+        background-image: linear-gradient(currentColor, currentColor);
+        background-position: 0% 100%;
+        background-repeat: no-repeat;
+        background-size: 0% 1px;
+        transition: background-size .3s;
+        &:hover {
+          background-size: 100% 1px;
         }
         &.isActive {
-            background: rgba(255, 255, 255, 0.08);
-        }
-        &:hover {
-            background: rgba(255, 255, 255, 0.08);
+            background-size: 100% 1px;
         }
     }
 }

@@ -11,8 +11,10 @@
     &__block {
         padding: vw(30);
         background: var(--F5F6F8, #F5F6F8);
+        min-height: vw(500);
         &:not(:last-child) {
             margin-bottom: vw(40);
+            min-height: unset;
         }
     }
     &__top {
