@@ -7,8 +7,8 @@
     <title>Professional Page</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@100..900&display=swap&_v=20240401181745" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css?_v=20240401181745">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@100..900&display=swap&_v=20240405233611" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css?_v=20240405233611">
 </head>
 <body>
     <div class="wrapper" id="app" :class="{isMobile, isTablet}">
@@ -17,7 +17,7 @@
         <a href="#" class="header__logo">
             <img src="./img/logo.svg" alt="">
         </a>
-        <nav class="header__menu">
+        <nav class="header__menu" v-if="sizes.window >= 1023">
             <ul>
                 <li><a href="#">About</a></li>
                 <li><a href="#">Professionals</a></li>
@@ -37,12 +37,35 @@
                 中文
             </a>
         </div>
+        <div class="header__burger" :class="{'isOpened': header.isMobileMenuOpened}" v-if="sizes.window <= 1023">
+            <div class="header__burger--icon" @click.prevent="header.toogleMobileMenu.apply(header)"></div>
+            <div class="header__burger--body">
+                <div class="header__burger--top">
+                    <a href="/" class="header__burger--logo">
+                        <img src="./img/logo.svg" alt="">
+                    </a>
+                    <div class="header__burger--close" @click.prevent="header.toogleMobileMenu.apply(header)"></div>
+                </div>
+                <div class="header__burger--item">
+                    <nav class="header__burger--menu" @click="header.toogleMobileMenu.apply(header)">
+                        <ul>
+                            <li><a href="#">About</a></li>
+                            <li><a href="#">Professionals</a></li>
+                            <li><a href="#">Practice Areas</a></li>
+                            <li><a href="#">Resources</a></li>
+                            <li><a href="#">Contact</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
     </div>
 </header>
         <main class="content">
             <div class="prof_into">
     <div class="prof_into__img">
-        <picture><source srcset="./img/bg_prof.webp" type="image/webp"><img src="./img/bg_prof.jpg" alt=""></picture>
+        <img v-if="sizes.window >= 520" src="./img/bg_prof.jpg" alt="">
+        <picture><source srcset="./img/face5.webp" type="image/webp"><img v-if="sizes.window <= 520" src="./img/face5.jpg" alt=""></picture>
     </div>
     <div class="prof_into__top center_block">
         <div class="prof_into__info">
@@ -96,6 +119,14 @@
                     </div>
                 </div>
             </div>
+            <div class="text_info__links" v-if="sizes.window <= 1023">
+                <div class="text_info__links--title">Speaking Engagements</div>
+                <div class="text_info__links--lnks">
+                    <a href="#" class="text_info__links--lnk">Why EB-5 is Still the Best Option, Asian Real Estate Association of America (AREAA) and Ackerman LLP (2023)</a>
+                    <a href="#" class="text_info__links--lnk">New EB-5 Framework under RIA, New Empire Builder Corp. (2022)</a>
+                    <a href="#" class="text_info__links--lnk">Economic Opportunities in Africa: Engaging With the African Diaspora <br>for Trade, US Africa Trade and Business Network (2020)</a>
+                </div>
+            </div>
         </div>
         <div class="text_info__r-side">
             <div class="text_info__txt">
@@ -106,7 +137,7 @@
                 <p>Reflective of the firm’s core values, Peter prioritizes the cultivation of long-term client relationships by consistently delivering world-class legal representation. Peter was recognized by Super Lawyers as a “Rising Star” (age 40 or under) in the area of securities and corporate finance.</p>
                 <p>Peter is fluent in English and Mandarin Chinese.</p>
             </div>
-            <div class="text_info__links">
+            <div class="text_info__links" v-if="sizes.window >= 1023">
                 <div class="text_info__links--title">Speaking Engagements</div>
                 <div class="text_info__links--lnks">
                     <a href="#" class="text_info__links--lnk">Why EB-5 is Still the Best Option, Asian Real Estate Association of America (AREAA) and Ackerman LLP (2023)</a>
@@ -203,6 +234,6 @@
     </div>
 </div>
     </div>
-    <script src="js/app.min.js?_v=20240401181745"></script>
+    <script src="js/app.min.js?_v=20240405233611"></script>
 </body>
 </html>

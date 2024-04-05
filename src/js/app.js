@@ -18,7 +18,9 @@ window.app = new Vue({
             mobile: 768,
             window: window.innerWidth
         },
-        header: new Header(),
+        header: new Header({
+            isMobileMenuOpened: false,
+        }),
         mainSlider: new MainSlider(),
         faqBlock: new FaqBlock(),
         modals: new Modals({

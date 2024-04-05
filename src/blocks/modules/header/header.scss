@@ -12,6 +12,11 @@
         padding-top: vw(20);
         padding-bottom: vw(20);
         border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+        @media all and (max-width: 1023px) {
+            padding-top: 20px;
+            padding-bottom: 20px;
+            border: 0;
+        }
     }
     &__logo {
         font-size: 0;
@@ -19,6 +24,12 @@
         display: inline-block;
         flex: 0 0 vw(254);
         margin-right: vw(10);
+        @media all and (max-width: 1023px) {
+            flex: none;
+            max-width: 127px;
+            width: 100%;
+            margin-right: 10px;
+        }
     }
     &__menu {
         ul {
@@ -52,6 +63,10 @@
     }
     &__langs {
         display: flex;
+        @media all and (max-width: 1023px) {
+            margin-right: 20px;
+            margin-left: auto;
+        }
     }
     &__lang {
         margin: 0 vw(10);
@@ -69,11 +84,163 @@
         background-repeat: no-repeat;
         background-size: 0% 1px;
         transition: background-size .3s;
+        @media all and (max-width: 1023px) {
+            font-size: 12px;
+            padding-left: 8px;
+            padding-right: 8px;
+            margin: 0;
+            background-image: unset;
+            &:not(:last-child) {
+                border-right: 1px solid rgba(255, 255, 255, 0.2);;
+            }
+        }
         &:hover {
-          background-size: 100% 1px;
+            background-size: 100% 1px;
+            @media all and (max-width: 1023px) {
+                color: rgba(255, 255, 255, 0.4);
+            }
         }
         &.isActive {
             background-size: 100% 1px;
+            @media all and (max-width: 1023px) {
+                color: rgba(255, 255, 255, 0.4);
+            }
+        }
+    }
+    &__burger {
+        display: none;
+        @media all and (max-width: 1023px) {
+            display: block;
+        }
+        &--icon {
+            width: 25px;
+            height: 16px;
+            cursor: pointer;
+            background: url("data:image/svg+xml,%3Csvg width='25' height='16' viewBox='0 0 25 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='25' height='2' fill='white' /%3E%3Crect y='7' width='25' height='2' fill='white' /%3E%3Crect y='14' width='25' height='2' fill='white' /%3E%3C/svg%3E") 50% / 100% no-repeat;
+        }
+        &--top {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: var(--white, #024e88);
+            padding: 20px 15px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+        }
+        &--close {
+            width: 25px;
+            height: 25px;
+            background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32' fill='none'%3E%3Cpath d='M24 8L8 24M8 8L24 24' stroke='white' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") 50% / 100% no-repeat;
+            cursor: pointer;
+        }
+        &--logo {
+            max-width: 127px;
+            width: 100%;
+            display: block;
+            text-decoration: none;
+        }
+        &--body {
+            overflow: auto;
+            width: 100%;
+            position: fixed;
+            z-index: 10;
+            right: -100%;
+            top: 0;
+            bottom: 0;
+            max-height: 100%;
+            border-radius: 0px 0px 8px 8px;
+            background: var(--light-grey, #024e88);
+        }
+        &.isOpened {
+            &:before {
+                content: '';
+                position: fixed;
+                top: 0;
+                left: 0;
+                bottom: 0;
+                right: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(0, 0, 0, 0.60);
+                z-index: 9;
+            }
+            .header__burger--body {
+                right: 0;
+            }
+        }
+        &--item {
+            padding: 20px 15px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        &--menu {
+            padding-bottom: 15px;
+            > ul {
+                list-style: none;
+                margin: 0;
+                padding: 0;
+                display: flex;
+                flex-wrap: wrap;
+                flex-direction: column;
+                > li {
+                    &:not(:last-child) {
+                        margin-bottom: 32px;
+                    }
+                    > a {
+                        color: var(--Black, #fff);
+                        font-family: 'Gilroy', sans-serif, cursive;
+                        font-size: 16px;
+                        font-style: normal;
+                        font-weight: 500;
+                        line-height: 120%;
+                        text-decoration: none;
+                        &:hover {
+                            color: #B8F40F;
+                        }
+                    }
+                }
+            }
+        }
+        &--btn {
+            color: var(--Black, #313132);
+            text-align: center;
+            font-family: 'Gilroy', sans-serif, cursive;
+            font-size: 16px;
+            font-style: normal;
+            border: 0;
+            font-weight: 500;
+            line-height: 100%;
+            border-radius: 4px;
+            background: var(--green, #B8F40F);
+            cursor: pointer;
+            padding: 13px 24px;
+            span {
+                pointer-events: none;
+                display: inline-block;
+                padding-left: 28px;
+                position: relative;
+                &:before {
+                    width: 20px;
+                    height: 20px;
+                    content: '';
+                    position: absolute;
+                    left: 0;
+                    margin-top: -10px;
+                    top: 50%;
+                    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20' fill='none'%3E%3Cpath d='M10.0999 10.65C10.0416 10.6417 9.9666 10.6417 9.89994 10.65C8.43327 10.6 7.2666 9.39998 7.2666 7.92498C7.2666 6.41665 8.48327 5.19165 9.99993 5.19165C11.5083 5.19165 12.7333 6.41665 12.7333 7.92498C12.7249 9.39998 11.5666 10.6 10.0999 10.65Z' stroke='%23292D32' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M15.6171 16.15C14.1338 17.5083 12.1671 18.3333 10.0005 18.3333C7.83379 18.3333 5.86712 17.5083 4.38379 16.15C4.46712 15.3667 4.96712 14.6 5.85879 14C8.14212 12.4833 11.8755 12.4833 14.1421 14C15.0338 14.6 15.5338 15.3667 15.6171 16.15Z' stroke='%23292D32' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M10.0003 18.3334C14.6027 18.3334 18.3337 14.6024 18.3337 10C18.3337 5.39765 14.6027 1.66669 10.0003 1.66669C5.39795 1.66669 1.66699 5.39765 1.66699 10C1.66699 14.6024 5.39795 18.3334 10.0003 18.3334Z' stroke='%23292D32' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") 50% / 100% no-repeat;
+                }
+            }
+            &:hover {
+                background: #232323;
+                span {
+                    color: #fff;
+                }
+                span {
+                    &:before {
+                        background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20' fill='none'%3E%3Cpath d='M10.0999 10.65C10.0416 10.6417 9.9666 10.6417 9.89994 10.65C8.43327 10.6 7.2666 9.39998 7.2666 7.92498C7.2666 6.41665 8.48327 5.19165 9.99993 5.19165C11.5083 5.19165 12.7333 6.41665 12.7333 7.92498C12.7249 9.39998 11.5666 10.6 10.0999 10.65Z' stroke='%23ffffff' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M15.6171 16.15C14.1338 17.5083 12.1671 18.3333 10.0005 18.3333C7.83379 18.3333 5.86712 17.5083 4.38379 16.15C4.46712 15.3667 4.96712 14.6 5.85879 14C8.14212 12.4833 11.8755 12.4833 14.1421 14C15.0338 14.6 15.5338 15.3667 15.6171 16.15Z' stroke='%23ffffff' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M10.0003 18.3334C14.6027 18.3334 18.3337 14.6024 18.3337 10C18.3337 5.39765 14.6027 1.66669 10.0003 1.66669C5.39795 1.66669 1.66699 5.39765 1.66699 10C1.66699 14.6024 5.39795 18.3334 10.0003 18.3334Z' stroke='%23ffffff' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") 50% / 100% no-repeat;
+                    }
+                }
+            }
         }
     }
 }

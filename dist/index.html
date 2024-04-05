@@ -7,8 +7,8 @@
     <title>Home</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@100..900&display=swap&_v=20240401181745" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css?_v=20240401181745">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@100..900&display=swap&_v=20240405233611" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css?_v=20240405233611">
 </head>
 <body>
     <div class="wrapper" id="app" :class="{isMobile, isTablet}">
@@ -17,7 +17,7 @@
         <a href="#" class="header__logo">
             <img src="./img/logo.svg" alt="">
         </a>
-        <nav class="header__menu">
+        <nav class="header__menu" v-if="sizes.window >= 1023">
             <ul>
                 <li><a href="#">About</a></li>
                 <li><a href="#">Professionals</a></li>
@@ -36,6 +36,28 @@
             <a href="#" class="header__lang">
                 中文
             </a>
+        </div>
+        <div class="header__burger" :class="{'isOpened': header.isMobileMenuOpened}" v-if="sizes.window <= 1023">
+            <div class="header__burger--icon" @click.prevent="header.toogleMobileMenu.apply(header)"></div>
+            <div class="header__burger--body">
+                <div class="header__burger--top">
+                    <a href="/" class="header__burger--logo">
+                        <img src="./img/logo.svg" alt="">
+                    </a>
+                    <div class="header__burger--close" @click.prevent="header.toogleMobileMenu.apply(header)"></div>
+                </div>
+                <div class="header__burger--item">
+                    <nav class="header__burger--menu" @click="header.toogleMobileMenu.apply(header)">
+                        <ul>
+                            <li><a href="#">About</a></li>
+                            <li><a href="#">Professionals</a></li>
+                            <li><a href="#">Practice Areas</a></li>
+                            <li><a href="#">Resources</a></li>
+                            <li><a href="#">Contact</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
         </div>
     </div>
 </header>
@@ -293,6 +315,6 @@
     </div>
 </div>
     </div>
-    <script src="js/app.min.js?_v=20240401181745"></script>
+    <script src="js/app.min.js?_v=20240405233611"></script>
 </body>
 </html>

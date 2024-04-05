@@ -14,13 +14,13 @@ const MainSlider = class MainSlider {
                     {
                         breakpoint: 1023,
                         settings: {
-                            slidesToShow: 2
+                            slidesToShow: 1
                         }
                     },
                     {
                         breakpoint: 680,
                         settings: {
-                            slidesToShow: 2
+                            slidesToShow: 1
                         }
                     },
                     {

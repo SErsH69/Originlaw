@@ -1,11 +1,21 @@
 .text_blocks {
     padding-top: vw(90);
     padding-bottom: vw(120);
+    @media all and (max-width: 1023px) {
+        padding-top: 50px;
+        padding-bottom: 60px;
+    }
     &__block {
+        display: flex;
+        @media all and (max-width: 1023px) {
+            flex-direction: column;
+        }
         &:not(:last-child) {
             margin-bottom: vw(90);
+            @media all and (max-width: 1023px) {
+                margin-bottom: 50px;
+            }
         }
-        display: flex;
         &--quote {
             padding-top: vw(30);
             padding-bottom: vw(40);
@@ -17,10 +27,19 @@
             font-style: normal;
             font-weight: 700;
             line-height: 125%;
+            @media all and (max-width: 1023px) {
+                padding-top: 30px;
+                padding-bottom: 30px;
+                font-size: 17px;
+                line-height: 145%;
+            }
         }
     }
     &__l-side {
         width: calc(50% - vw(15));
+        @media all and (max-width: 1023px) {
+            width: 100%;
+        }
     }
     &__title {
         color: var(--212121, #212121);
@@ -29,17 +48,29 @@
         font-weight: 700;
         line-height: 125%;
         margin-bottom: vw(30);
+        @media all and (max-width: 1023px) {
+            margin-bottom: 20px;
+            font-size: 21px;
+            line-height: 145%;
+        }
     }
     &__img {
         font-size: 0;
         max-width: vw(297);
         width: 100%;
+        @media all and (max-width: 1023px) {
+            max-width: 178px;
+            margin-bottom: 30px;
+        }
         img {
             width: 100%;
         }
     }
     &__r-side {
         width: calc(50% - vw(15));
+        @media all and (max-width: 1023px) {
+            width: 100%;
+        }
     }
     &__text {
         color: var(--212121, #212121);
@@ -47,5 +78,16 @@
         font-style: normal;
         font-weight: 400;
         line-height: 155%;
+        p {
+            &:first-child {
+                margin-top: 0;
+            }
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+        @media all and (max-width: 1023px) {
+            font-size: 14px;
+        }
     }
 }

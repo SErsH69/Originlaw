@@ -1,13 +1,20 @@
 <div class="res_block">
     <div class="res_block__in center_block">
         <div class="res_block__top">
-            <div class="res_block__flags">
+            <div class="res_block__flags" v-if="sizes.window >= 1023">
                 <div class="res_block__flag isActive">All</div>
                 <div class="res_block__flag">News</div>
                 <div class="res_block__flag">Insights</div>
                 <div class="res_block__flag">Immigration</div>
                 <div class="res_block__flag">Interview</div>
             </div>
+            <select class="res_block__select" v-if="sizes.window <= 1023">
+                <option value="All">All</option>
+                <option value="News">News</option>
+                <option value="Insights">Insights</option>
+                <option value="Immigration">Immigration</option>
+                <option value="Interview">Interview</option>
+            </select>
             <div class="res_block__search">
                 <form action="">
                     <input type="search" placeholder="Search">

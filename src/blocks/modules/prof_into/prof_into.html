@@ -1,6 +1,7 @@
 <div class="prof_into">
     <div class="prof_into__img">
-        <img src="./img/bg_prof.jpg" alt="">
+        <img v-if="sizes.window >= 520" src="./img/bg_prof.jpg" alt="">
+        <img v-if="sizes.window <= 520" src="./img/face5.jpg" alt="">
     </div>
     <div class="prof_into__top center_block">
         <div class="prof_into__info">

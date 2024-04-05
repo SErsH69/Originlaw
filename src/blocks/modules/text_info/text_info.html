@@ -27,6 +27,14 @@
                     </div>
                 </div>
             </div>
+            <div class="text_info__links" v-if="sizes.window <= 1023">
+                <div class="text_info__links--title">Speaking Engagements</div>
+                <div class="text_info__links--lnks">
+                    <a href="#" class="text_info__links--lnk">Why EB-5 is Still the Best Option, Asian Real Estate Association of America (AREAA) and Ackerman LLP (2023)</a>
+                    <a href="#" class="text_info__links--lnk">New EB-5 Framework under RIA, New Empire Builder Corp. (2022)</a>
+                    <a href="#" class="text_info__links--lnk">Economic Opportunities in Africa: Engaging With the African Diaspora <br>for Trade, US Africa Trade and Business Network (2020)</a>
+                </div>
+            </div>
         </div>
         <div class="text_info__r-side">
             <div class="text_info__txt">
@@ -37,7 +45,7 @@
                 <p>Reflective of the firm’s core values, Peter prioritizes the cultivation of long-term client relationships by consistently delivering world-class legal representation. Peter was recognized by Super Lawyers as a “Rising Star” (age 40 or under) in the area of securities and corporate finance.</p>
                 <p>Peter is fluent in English and Mandarin Chinese.</p>
             </div>
-            <div class="text_info__links">
+            <div class="text_info__links" v-if="sizes.window >= 1023">
                 <div class="text_info__links--title">Speaking Engagements</div>
                 <div class="text_info__links--lnks">
                     <a href="#" class="text_info__links--lnk">Why EB-5 is Still the Best Option, Asian Real Estate Association of America (AREAA) and Ackerman LLP (2023)</a>
