@@ -120,6 +120,12 @@
                 height: 16px;
             }
         }
+        &:hover {
+            background: #012A4A;
+            img {
+                filter: invert(1);
+            }
+        }
     }
     &__link {
         text-decoration: none;
@@ -134,6 +140,10 @@
         @media all and (max-width: 1023px) {
             padding: 11px 15px;
             font-size: 14px;
+        }
+        &:hover {
+            color: #fff;
+            background: #012A4A;
         }
     }
 }
