@@ -5,8 +5,8 @@ const MainSlider = class MainSlider {
     constructor(){}
     initSlider() {
         document.addEventListener('DOMContentLoaded', () => {
-            $('.js_main_first').slick({
-                slidesToShow: 1,
+            $('.js_res_slider').slick({
+                slidesToShow: 3,
                 arrows: true,
                 infinite: true,
                 slidesToScroll: 1,
@@ -14,7 +14,7 @@ const MainSlider = class MainSlider {
                     {
                         breakpoint: 1023,
                         settings: {
-                            slidesToShow: 2
+                            slidesToShow: 1
                         }
                     },
                     {

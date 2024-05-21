@@ -7,6 +7,7 @@ import $ from 'jquery';
 import Header from '../blocks/modules/header/header.js';
 import FaqBlock from '../blocks/modules/faq_block/faq_block.js';
 import MainSlider from '../blocks/modules/main_slider/main_slider.js';
+import ResSlider from '../blocks/modules/res_slider/res_slider.js';
 import Modals from '../blocks/modules/modals/modals.js';
 
 window.app = new Vue({
@@ -22,6 +23,7 @@ window.app = new Vue({
             isMobileMenuOpened: false,
         }),
         mainSlider: new MainSlider(),
+        resSlider: new ResSlider(),
         faqBlock: new FaqBlock(),
         modals: new Modals({
             modalsSelector: "data-modal",
@@ -38,6 +40,7 @@ window.app = new Vue({
         this.isMounted = true;
         this.header.init();
         this.mainSlider.init();
+        this.resSlider.init();
         this.faqBlock.init();
         this.modals.init();
     },
